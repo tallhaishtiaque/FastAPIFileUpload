@@ -40,8 +40,8 @@ curl -X POST -H "Authorization: Bearer <TOKEN>" -F "file=@test.jpg" http://local
 3. For automated test create test files
 
 ```bash
-# Create a valid test image
-dd if=/dev/urandom of=test.jpg bs=1 count=1024
+# Get a valid test image
+for example: test.png
 
 # Create an invalid test file
 echo "invalid content" > test.txt

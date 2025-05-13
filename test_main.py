@@ -9,7 +9,7 @@ def test_upload_file():
     token = jwt.encode({"sub": "user"}, "secret-key", algorithm="HS256")
 
     # Test valid file upload
-    with open("test.jpg", "rb") as f:
+    with open("test.png", "rb") as f:
         response = client.post(
             "/upload",
             files={"file": ("test.jpg", f, "image/jpeg")},
