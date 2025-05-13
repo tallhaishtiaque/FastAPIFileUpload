@@ -4,9 +4,10 @@ from jose import jwt
 
 client = TestClient(app)
 
+# Generate valid JWT token
+token = jwt.encode({"sub": "user"}, "secret-key", algorithm="HS256")
+
 def test_upload_file():
-    # Generate valid JWT token
-    token = jwt.encode({"sub": "user"}, "secret-key", algorithm="HS256")
 
     # Test valid file upload
     with open("test.png", "rb") as f:
@@ -20,6 +21,7 @@ def test_upload_file():
     assert "file_id" in data
     assert "url" in data
 
+def test_upload_invalid_file():
     # Test invalid file type
     with open("test.txt", "w") as f:
         f.write("invalid content")
