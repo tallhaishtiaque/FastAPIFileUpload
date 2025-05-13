@@ -12,7 +12,7 @@ REST API for uploading files to MinIO storage with metadata management in Postgr
 ## Installation
 
 1. Clone repository
-2. Create `test.jpg` and `test.txt` for testing
+2. Create `test.png` and `test.txt` for testing
 3. Run:
 ```bash
 docker-compose up --build
